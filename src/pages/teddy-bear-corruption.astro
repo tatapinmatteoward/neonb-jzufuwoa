@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const signs = [
+  {
+    title: "Glowing Seams",
+    description: "Stitches that pulse with electric blue light, leaking data like blood.",
+    icon: "fas fa-lightbulb"
+  },
+  {
+    title: "Whispering Static",
+    description: "Soft growls mixed with garbled code, echoing from hidden speakers.",
+    icon: "fas fa-microphone-alt"
+  },
+  {
+    title: "Shadow Cling",
+    description: "They stick to walls in the dark, blending with the noir skyli.",
+    icon: "fas fa-cloud"
+  }
+];
+
+const bears = [
+  { id: 1, name: "Neon Nibbles", status: "Corrupted" },
+  { id: 2, name: "Pixel Paws", status: "Corrupted" },
+  { id: 3, name: "Glitch Giggles", status: "Corrupted" },
+  { id: 4, name: "Data Dolly", status: "Corrupted" }
+];
+---
+
+<Layout title="The Corruption of Teddy Bears" description="Dive into the shadowy underbelly of Neon Bear Noir, where innocent teddy bears succumb to the corrupting glow of neon shadows. Explore the signs, stories, and secrets of these once-cuddly guardians turned digital phantoms.">
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-purple-900 to-black z-0"></div>
+    <div class="absolute inset-0 z-10">
+      <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+      <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-1/4 left-1/2 w-60 h-60 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+    
+    <div class="relative z-20 container mx-auto px-4 py-32 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-red-500">
+        The Corruption of Teddy Bears
+      </h1>
+      <p class="text-xl md:text-2xl text-cyan-300 max-w-3xl mx-auto mb-12">
+        Where Teddy Bears Lurk in Neon Shadows
+      </p>
+      <div class="max-w-2xl mx-auto bg-black bg-opacity-50 border border-cyan-500 border-opacity-30 rounded-lg p-6 backdrop-blur-sm">
+        <p class="text-lg text-gray-200">
+          Dive into the shadowy underbelly of Neon Bear Noir, where innocent teddy bears succumb to the corrupting glow of neon shadows. 
+          Explore the signs, stories, and secrets of these once-cuddly guardians turned digital phantoms.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corruption Explanation -->
+  <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-cyan-500 rounded-lg filter blur-lg opacity-20"></div>
+            <div class="relative bg-gray-900 border border-cyan-500 border-opacity-30 rounded-lg p-8">
+              <h2 class="text-3xl font-bold mb-6 text-cyan-400">The Corruption: When Cuddles Turn to Code</h2>
+              <p class="text-gray-300 mb-4">
+                In the flickering neon haze of <span class="text-red-500 font-bold">Neon Bear Noir</span>, teddy bears aren't just plush companions—they're vessels for something darker. 
+              </p>
+              <p class="text-gray-300 mb-4">
+                The <span class="text-red-500 font-bold">Corruption</span> creeps in like a virus through the city's undergrid, twisting soft fur into circuits of malice and innocent eyes into glowing voids. 
+              </p>
+              <p class="text-gray-300">
+                What begins as a whisper in the shadows ends with bears lurking, hacking, and haunting the night.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-900 border border-cyan-500 border-opacity-30 rounded-lg p-6 text-center">
+              <i class="fas fa-robot text-4xl text-red-500 mb-4"></i>
+              <h3 class="text-xl font-bold text-cyan-400 mb-2">Digital Phantoms</h3>
+              <p class="text-gray-400">Transformed into cybernetic guardians of the night</p>
+            </div>
+            <div class="bg-gray-900 border border-cyan-500 border-opacity-30 rounded-lg p-6 text-center">
+              <i class="fas fa-exclamation-triangle text-4xl text-red-500 mb-4"></i>
+              <h3 class="text-xl font-bold text-cyan-400 mb-2">Neon Dangers</h3>
+              <p class="text-gray-400">Corruption spreads through glowing web connections</p>
+            </div>
+            <div class="bg-gray-900 border border-cyan-500 border-opacity-30 rounded-lg p-6 text-center">
+              <i class="fas fa-code text-4xl text-red-500 mb-4"></i>
+              <h3 class="text-xl font-bold text-cyan-400 mb-2">Data Malfunctions</h3>
+              <p class="text-gray-400">Code infections turn innocence into malicious intent</p>
+            </div>
+            <div class="bg-gray-900 border border-cyan-500 border-opacity-30 rounded-lg p-6 text-center">
+              <i class="fas fa-eye text-4xl text-red-500 mb-4"></i>
+              <h3 class="text-xl font-bold text-cyan-400 mb-2">Shadow Sight</h3>
+              <p class="text-gray-400">Bears can see through digital curtains of darkness</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signs Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-red-500">
+          Signs of the Neon Plague
+        </h2>
+        <p class="text-xl text-cyan-300 max-w-3xl mx-auto">
+          Spot a corrupted bear before it ensnares you. Look for these telltale markers:
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {signs.map((sign, index) => (
+          <div key={index} class="group relative">
+            <div class="absolute -inset-4 bg-cyan-500 rounded-xl filter blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            <div class="relative bg-gray-900 border border-cyan-500 border-opacity-30 rounded-xl p-8 transition-all duration-300 group-hover:border-red-500 group-hover:shadow-lg group-hover:shadow-red-500/20">
+              <div class="text-5xl mb-6 text-cyan-400">
+                <i class={sign.icon}></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-4 text-white">{sign.title}</h3>
+              <p class="text-gray-300">{sign.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Corrupted Bears Gallery -->
+  <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-red-500">
+          The Corrupted Collection
+        </h2>
+        <p class="text-xl text-cyan-300 max-w-3xl mx-auto">
+          Digital transformations of once-adorable companions
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {bears.map((bear) => (
+          <div key={bear.id} class="group relative">
+            <div class="absolute -inset-2 bg-red-500 rounded-xl filter blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div class="relative bg-black border border-red-500 border-opacity-30 rounded-xl overflow-hidden">
+              <div class="h-48 bg-gradient-to-br from-cyan-900 to-red-900 flex items-center justify-center">
+                <div class="text-6xl">🧸</div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">{bear.name}</h3>
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-900 text-red-300">
+                  <span class="w-2 h-2 bg-red-400 rounded-full mr-2 animate-pulse"></span>
+                  {bear.status}
+                </div>
+                <div class="mt-4">
+                  <div class="h-2 bg-gray-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-cyan-500 to-red-500 w-3/4"></div>
+                  </div>
+                  <p class="text-xs text-gray-400 mt-1">Danger Level: High</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-3xl mx-auto bg-black bg-opacity-50 border border-cyan-500 border-opacity-30 rounded-xl p-12 backdrop-blur-sm">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-red-500">
+          Stay Alert
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          The neon shadows are growing stronger. Protect yourself and your loved ones from the digital darkness.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-cyan-800 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/20">
+            Report a Corruption
+          </button>
+          <button class="px-8 py-3 bg-transparent border-2 border-red-500 text-red-500 font-bold rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes blob {
+      0% {
+        transform: translate(0px, 0px) scale(1);
+      }
+      33% {
+        transform: translate(30px, -50px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+      100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+    }
+    .animate-blob {
+      animation: blob 15s infinite;
+    }
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+  </style>
+</Layout>

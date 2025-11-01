@@ -1,0 +1,59 @@
+---
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/the-dark-side', label: 'The Dark Side' },
+  { href: '/origins-of-the-terror', label: 'Origins Of The Terror' },
+  { href: '/neon-nightmare-tales', label: 'Neon Nightmare Tales' },
+  { href: '/teddy-bear-corruption', label: 'Teddy Bear Corruption' },
+  { href: '/the-guardian-of-the-dark', label: 'The Guardian Of The Dark' }
+];
+---
+
+<nav class="bg-black border-b border-[#00ffff] shadow-[0_0_10px_#00ffff]">
+  <div class="container mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-[#00ffff] hover:text-[#ff0033] transition-colors duration-300">
+        Neon Bear Noir
+      </a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-6">
+        {navItems.map((item) => (
+          <a 
+            href={item.href} 
+            class="text-[#00ffff] hover:text-[#ff0033] transition-colors duration-300 relative group"
+          >
+            {item.label}
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ff0033] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        ))}
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-[#00ffff]">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col gap-3 py-3 border-t border-[#00ffff] shadow-[0_0_10px_#00ffff]">
+      {navItems.map((item) => (
+        <a 
+          href={item.href} 
+          class="text-[#00ffff] hover:text-[#ff0033] transition-colors duration-300 py-2 px-4 rounded hover:bg-[#ff0033] hover:bg-opacity-10"
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<!-- Client-side JavaScript for mobile toggle -->
+<script>
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

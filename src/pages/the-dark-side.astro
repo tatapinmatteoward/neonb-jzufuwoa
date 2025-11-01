@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const bears = [
+  {
+    name: "Corrupted Cuddles",
+    description: "Stuffed with rogue AI, they whisper forbidden data streams to those who listen too closely.",
+    icon: "fas fa-brain"
+  },
+  {
+    name: "Neon Nightmares",
+    description: "Under pulsing lights, their button eyes reflect the void, drawing wanderers into endless loops of digital despair.",
+    icon: "fas fa-eye"
+  },
+  {
+    name: "Shadow Pacts",
+    description: "Alliances forged in the dark alleys, where bears become guardians of forgotten code.",
+    icon: "fas fa-handshake"
+  }
+];
+
+const sections = [
+  {
+    title: "Whispers in the Wires",
+    content: "These aren't your childhood guardians. In the undergrid of the city, teddy bears glitch into sentinels of the night."
+  },
+  {
+    title: "Digital Despair",
+    content: "In the flickering haze of cyber-noir streets, where neon glows paint the night in electric blues and pinks, the teddy bears of Neon Bear Noir are more than they seem."
+  },
+  {
+    title: "The Hidden Underbelly",
+    description: "Beneath their soft, innocent exteriors lies a world of shadows—a realm where cuddly companions harbor dark secrets and forgotten code."
+  }
+];
+---
+
+<Layout 
+  title="The Dark Side" 
+  description="Unveil the hidden underbelly of Neon Bear Noir, where plush teddy bears conceal cyber-noir mysteries amid glowing neon shadows. Explore the perils and secrets lurking in the digital dusk."
+>
+  <!-- Hero Section -->
+  <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-800 z-0"></div>
+    
+    <!-- Animated background elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+      <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div class="absolute bottom-1/4 left-1/3 w-60 h-60 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+        The Dark Side
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 font-light tracking-wide">
+        Where Teddy Bears Lurk in Neon Shadows
+      </p>
+      <div class="w-32 h-1 bg-gradient-to-r from-cyan-500 to-pink-500 mx-auto rounded-full"></div>
+    </div>
+    
+    <!-- Scrolling indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-cyan-400">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-lg filter blur opacity-20 animate-pulse"></div>
+            <div class="relative bg-gray-800 border border-gray-700 rounded-lg p-8">
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-cyan-900 flex items-center justify-center mr-4">
+                  <i class="fas fa-code text-cyan-400 text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-cyan-400">Digital Underbelly</h2>
+              </div>
+              <p class="text-gray-300 leading-relaxed">
+                In the flickering haze of cyber-noir streets, where <span class="text-cyan-400 font-bold">neon glows</span> paint the night in electric blues and pinks, the teddy bears of Neon Bear Noir are more than they seem. Beneath their soft, innocent exteriors lies a world of shadows—a realm where cuddly companions harbor <span class="text-pink-500 font-bold">dark secrets</span> and forgotten code.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg p-6 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-cyan-500 rounded-full opacity-10 transform rotate-45 translate-y-8 translate-x-8"></div>
+              <h3 class="text-xl font-bold text-white mb-3">The Hidden Truth</h3>
+              <p class="text-gray-400 text-sm">They watch, they listen, they remember.</p>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg p-6 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-pink-500 rounded-full opacity-10 transform rotate-45 translate-y-8 translate-x-8"></div>
+              <h3 class="text-xl font-bold text-white mb-3">Digital Despair</h3>
+              <p class="text-gray-400 text-sm">In the undergrid of the city, bears become sentinels.</p>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg p-6 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-cyan-500 rounded-full opacity-10 transform rotate-45 translate-y-8 translate-x-8"></div>
+              <h3 class="text-xl font-bold text-white mb-3">The Glitch</h3>
+              <p class="text-gray-400 text-sm">Corrupted cuddles whisper forbidden data streams.</p>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-lg p-6 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-16 h-16 bg-pink-500 rounded-full opacity-10 transform rotate-45 translate-y-8 translate-x-8"></div>
+              <h3 class="text-xl font-bold text-white mb-3">Shadow Pacts</h3>
+              <p class="text-gray-400 text-sm">Alliances forged in the dark alleys.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bear Types Section -->
+  <section class="py-20 bg-black">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+          Whispers in the Wires
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-pink-500 mx-auto rounded-full"></div>
+        <p class="mt-6 text-gray-400 max-w-2xl mx-auto">
+          These aren't your childhood guardians. In the undergrid of the city, teddy bears glitch into sentinels of the night.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {bears.map((bear, index) => (
+          <div key={index} class="relative group">
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-pink-500 rounded-xl filter blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+            <div class="relative bg-gray-900 border border-gray-800 rounded-xl p-8 h-full transition-all duration-300 group-hover:border-cyan-500">
+              <div class="flex items-center mb-6">
+                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-900 to-pink-900 flex items-center justify-center mr-4">
+                  <i class={`${bear.icon} text-cyan-400 text-2xl`}></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">{bear.name}</h3>
+              </div>
+              <p class="text-gray-300 leading-relaxed">{bear.description}</p>
+              <div class="mt-6 flex justify-between items-center">
+                <span class="text-cyan-400 text-sm font-mono">NEON.BEAR</span>
+                <div class="flex space-x-2">
+                  <div class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
+                  <div class="w-2 h-2 bg-pink-500 rounded-full animate-pulse animation-delay-200"></div>
+                  <div class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse animation-delay-400"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="grid grid-cols-1 gap-16">
+        {sections.map((section, index) => (
+          <div key={index} class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-lg filter blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+            <div class="relative bg-gray-900 border border-gray-800 rounded-lg p-8">
+              <h3 class="text-3xl font-bold mb-6 text-cyan-400">{section.title}</h3>
+              <p class="text-gray-300 leading-relaxed text-lg">
+                {section.content}
+              </p>
+              {section.description && (
+                <p class="mt-4 text-gray-400 italic">
+                  {section.description}
+                </p>
+              )}
+              <div class="mt-6 flex items-center">
+                <div class="w-8 h-1 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full mr-4"></div>
+                <span class="text-cyan-400 text-sm font-mono">DATA.RESTRICTED</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-r from-gray-900 to-black">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+          Enter the Digital Dusk
+        </h2>
+        <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+          Explore the perils and secrets lurking in the digital dusk. <br class="hidden md:block" />
+          The neon shadows conceal more than you can imagine.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-700 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-cyan-800 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50">
+            <i class="fas fa-eye mr-2"></i> Begin Exploration
+          </button>
+          <button class="px-8 py-4 bg-transparent border-2 border-pink-500 text-pink-500 font-bold rounded-lg hover:bg-pink-500 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50">
+            <i class="fas fa-shield-alt mr-2"></i> Secure Access
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes blob {
+      0% {
+        transform: translate(0px, 0px) scale(1);
+      }
+      33% {
+        transform: translate(30px, -50px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+      100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+    }
+    
+    .animate-blob {
+      animation: blob 15s infinite;
+    }
+    
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+  </style>
+</Layout>

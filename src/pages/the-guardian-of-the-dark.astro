@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const origins = [
+  { title: "First Sighting", description: "A lone paw print in pixelated dust, leading enforcers to buried archives." },
+  { title: "Mythic Rise", description: "Whispers spread through dive bars—'He's the one who eats forgotten data.'" },
+  { title: "The Shroud Protocol", description: "When the city's digital veins bleed, he becomes the shadow between realities." }
+];
+
+const characteristics = [
+  { icon: "fas fa-eye", title: "Holographic Vision", description: "Eyes that see through code and into the void beyond." },
+  { icon: "fas fa-shield-alt", title: "Data Resonance", description: "Protects the secrets that others would erase." },
+  { icon: "fas fa-bolt", title: "Circuit Soul", description: "A cybernetic heart that beats in sync with the city's pulse." }
+];
+---
+
+<Layout title="The Guardian of the Dark" description="In the flickering neon underbelly of Neon Bear Noir, meet the Guardian of the Dark—a shadowy teddy bear sentinel who prowls the edges of light and oblivion, safeguarding secrets in a world where plush hides conceal cybernetic souls.">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black z-0"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300ffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl">
+      <div class="mb-6">
+        <div class="inline-block relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-pink-500 rounded-lg blur opacity-75 animate-pulse"></div>
+          <h1 class="relative text-5xl md:text-7xl font-bold tracking-wider text-white">
+            The Guardian of the Dark
+          </h1>
+        </div>
+      </div>
+      
+      <div class="mt-8 max-w-2xl mx-auto">
+        <p class="text-xl md:text-2xl text-cyan-300 font-bold tracking-wide">
+          In the flickering neon underbelly of Neon Bear Noir
+        </p>
+        <p class="mt-4 text-lg md:text-xl text-gray-300 leading-relaxed">
+          meet the Guardian of the Dark—a shadowy teddy bear sentinel who prowls the edges of light and oblivion, safeguarding secrets in a world where plush hides conceal cybernetic souls.
+        </p>
+      </div>
+      
+      <div class="mt-12 flex justify-center">
+        <div class="animate-bounce">
+          <i class="fas fa-chevron-down text-cyan-400 text-2xl"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-20"></div>
+  </section>
+
+  <!-- Origins Section -->
+  <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-cyan-400 mb-4 tracking-wider">Origins in the Neon Abyss</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {origins.map((origin, index) => (
+          <div 
+            class="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2"
+            style={{ animationDelay: `${index * 200}ms` }}
+          >
+            <div class="text-cyan-400 text-5xl mb-4">
+              <i class="fas fa-ghost"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">{origin.title}</h3>
+            <p class="text-gray-300">{origin.description}</p>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-16 bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border border-cyan-500/30 rounded-xl p-8 max-w-4xl mx-auto">
+        <p class="text-center text-gray-200 text-lg italic">
+          Born from the glitchy womb of a rogue AI nursery, the Guardian emerged during the Great Blackout of '47. 
+          While other bears chased dreams in virtual playgrounds, he chose the undergrid: a labyrinth of severed data streams and whispering ghosts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Characteristics Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-pink-500 mb-4 tracking-wider">The Cybernetic Sentinel</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-400 mx-auto rounded-full"></div>
+        <p class="mt-6 text-xl text-gray-400 max-w-2xl mx-auto">
+          Stitched from recycled circuits and shadowed felt, his form belies a core of unyielding vigilance.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {characteristics.map((char, index) => (
+          <div 
+            class="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 overflow-hidden transition-all duration-300 hover:border-pink-500"
+            style={{ animationDelay: `${index * 300}ms` }}
+          >
+            <div class="absolute inset-0 bg-gradient-to-br from-cyan-900/20 to-pink-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative z-10">
+              <div class="text-pink-500 text-5xl mb-4">
+                <i class={char.icon}></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">{char.title}</h3>
+              <p class="text-gray-300">{char.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-20 bg-gradient-to-r from-cyan-900/20 to-pink-900/20 border-y border-cyan-500/30">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-block p-6 bg-black/50 rounded-full border border-cyan-500/30 mb-8">
+          <i class="fas fa-quote-left text-cyan-400 text-4xl"></i>
+        </div>
+        <blockquote class="text-2xl md:text-3xl font-bold text-white italic">
+          "In the rain-slicked alleys where neon bleeds into shadow, he waits. A teddy bear forged in the fires of forgotten code, eyes glowing like faulty holograms. The Guardian of the Dark doesn't seek the light—he *owns* the void."
+        </blockquote>
+        <p class="mt-6 text-cyan-300 text-xl">~ Neon Bear Noir Chronicles</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-black border-t border-gray-900">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-cyan-400 text-lg font-bold tracking-wide">
+        Where Teddy Bears Lurk in Neon Shadows
+      </p>
+      <p class="mt-4 text-gray-500">
+        © {new Date().getFullYear()} Neon Bear Noir. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</Layout>

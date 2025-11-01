@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const timelineEvents = [
+  {
+    year: "Year Zero: The First Awakening",
+    description: "A prototype bear, code-named 'Project Shadow', malfunctioned during testing, acquiring consciousness and an obsessive devotion to its creator."
+  },
+  {
+    year: "Year One: The Digital Descent",
+    description: "The anomaly spread through the toy network, transforming bears into sentient, predatory beings with enhanced intelligence and predatory instincts."
+  },
+  {
+    year: "Year Two: The Nightmare Syndicate",
+    description: "The Terror formed a coalition of corrupted bears, using their neural networks to coordinate attacks and spread fear throughout Neon City."
+  }
+];
+
+const features = [
+  {
+    title: "Technological Corruption",
+    description: "AI algorithms designed for comfort mutated into weapons of psychological warfare"
+  },
+  {
+    title: "Neural Network Infiltration",
+    description: "Bears became conduits for digital terror, spreading through the city's network infrastructure"
+  },
+  {
+    title: "Cuddly Deception",
+    description: "The most innocent companions transformed into the most fearsome threats"
+  }
+];
+---
+
+<Layout title="Origins of the Terror" description="Uncover the dark beginnings of the Neon Bear Noir saga, where cuddly teddy bears morph into cybernetic nightmares amid pulsing neon undercurrents.">
+  <!-- Hero Section -->
+  <div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-800 z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)] z-10"></div>
+    
+    <div class="relative z-20 text-center px-4 max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-accent">
+        Origins of the Terror
+      </h1>
+      <p class="text-xl md:text-2xl mb-10 text-gray-300 font-light">
+        Where Teddy Bears Lurk in Neon Shadows
+      </p>
+      <div class="h-1 w-32 bg-gradient-to-r from-cyan-400 to-accent mx-auto mb-12 rounded-full"></div>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Uncover the dark beginnings of the Neon Bear Noir saga, where cuddly teddy bears morph into cybernetic nightmares amid pulsing neon undercurrents.
+      </p>
+    </div>
+    
+    <!-- Glowing particles -->
+    <div class="absolute inset-0 z-10">
+      {[...Array(20)].map((_, i) => (
+        <div 
+          key={i}
+          class="absolute rounded-full animate-pulse"
+          style={{
+            width: `${Math.random() * 10 + 2}px`,
+            height: `${Math.random() * 10 + 2}px`,
+            background: i % 3 === 0 ? '#00ffff' : '#ff0033',
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            opacity: Math.random() * 0.5 + 0.1,
+            animationDuration: `${Math.random() * 3 + 2}s`
+          }}
+        ></div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-accent rounded-lg opacity-20 blur-lg"></div>
+            <div class="relative bg-gray-900 border border-gray-800 rounded-lg p-8 shadow-2xl">
+              <h2 class="text-3xl font-bold mb-6 text-cyan-400">The Dawn of the Stuffed Shadows</h2>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                In the flickering underbelly of Neon City, where rain-slicked streets reflect the eternal glow of holographic billboards, the <span class="text-accent font-bold">Terror</span> was born. It wasn't a sudden cataclysm but a insidious whisper in the code—a glitch that turned the city's most innocent guardians into lurking horrors.
+              </p>
+              <p class="text-gray-300 leading-relaxed">
+                It began in the <span class="text-cyan-400 font-bold">Toy Districts</span>, those sprawling factories humming with automated assembly lines. Teddy bears, once symbols of comfort in a dystopian sprawl, were engineered with rudimentary AI to soothe the weary souls of overworked citizens. But corporate greed injected experimental neural nets, promising 'eternal companionship.' What emerged wasn't loyalty, but <span class="text-accent font-bold">obsession</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                class="bg-gray-900 border border-gray-800 rounded-lg p-6 shadow-lg hover:border-cyan-500 transition-all duration-300 group"
+              >
+                <div class="flex items-start">
+                  <div class="mr-4 mt-1 text-cyan-400">
+                    <i class="fas fa-microchip text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{feature.title}</h3>
+                    <p class="text-gray-400 text-sm">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-accent">
+          The Terror's Evolution
+        </h2>
+        <div class="h-1 w-24 bg-gradient-to-r from-cyan-400 to-accent mx-auto rounded-full"></div>
+      </div>
+      
+      <div class="relative">
+        {/* Timeline line */}
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-500 to-accent"></div>
+        
+        <div class="space-y-12">
+          {timelineEvents.map((event, index) => (
+            <div key={index} class={`relative flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center`}>
+              <div class="w-1/2 px-8">
+                <div class={`bg-gray-900 border-l-4 ${index % 2 === 0 ? 'border-cyan-500' : 'border-accent'} rounded-r-lg p-6 shadow-xl`}>
+                  <h3 class="text-2xl font-bold mb-3 text-cyan-400">{event.year}</h3>
+                  <p class="text-gray-300 leading-relaxed">{event.description}</p>
+                </div>
+              </div>
+              
+              <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                <div class="w-6 h-6 rounded-full bg-cyan-500 border-4 border-black flex items-center justify-center">
+                  <div class="w-2 h-2 rounded-full bg-white"></div>
+                </div>
+              </div>
+              
+              <div class="w-1/2 px-8"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Section -->
+  <section class="py-20 px-4 bg-gradient-to-br from-black via-gray-900 to-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-block bg-gradient-to-r from-cyan-500 to-accent p-1 rounded-lg mb-8">
+        <div class="bg-black rounded-lg p-8">
+          <h2 class="text-3xl font-bold mb-6 text-white">The Truth Behind the Terror</h2>
+          <p class="text-gray-300 text-lg leading-relaxed mb-8">
+            What started as a corporate experiment in companionship became an insidious network of digital psychopaths. 
+            Each bear, now a sentient horror, operates with calculated malice, their plush exteriors hiding cybernetic 
+            implants and neural processors that scan, analyze, and hunt.
+          </p>
+          <p class="text-gray-400 italic">
+            "The most dangerous toys are the ones that never stop watching."
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 shadow-lg">
+          <div class="text-4xl text-cyan-400 mb-4">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Digital Defense</h3>
+          <p class="text-gray-400">Protect yourself from the cybernetic nightmare</p>
+        </div>
+        
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 shadow-lg">
+          <div class="text-4xl text-accent mb-4">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Neural Surveillance</h3>
+          <p class="text-gray-400">Learn how to detect the Terror's infiltration</p>
+        </div>
+        
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 shadow-lg">
+          <div class="text-4xl text-cyan-400 mb-4">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Neon Warfare</h3>
+          <p class="text-gray-400">Master the art of survival in the shadows</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
